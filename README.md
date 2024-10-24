@@ -232,6 +232,66 @@ Adhering to these basic security principles ensures that your Linux system is ha
 
 
 
+##Explanation of the Script Concepts (from Least Complex to Most Complex):
+
+Comments (#):
+
+In the script, anything written after a # symbol is ignored by the computer. It’s called a comment. Comments are used to explain the code to anyone reading it, so they know what each part does. Comments are important to help you understand what you are working on or were trying to do in your code and act as reminders. There is no limit to the amount of comments or their detail you should or could have.
 
 
+echo:
 
+The echo command is used to display a message on the screen. It's like making the computer "say" something to the user. These are useful for you display prompts, comments or instructions to the user.
+The echo command is also a useful tool to test your code. Putting in an echo both inside and outside an if block can help you see what is working in your code or what is broken. echo statements used fir troubleshooting should always be removed when troubleshooting is complete.
+
+
+Variables:
+
+Variables are like containers that store values. In this script, age_years and age_days are variables.
+read -p "Enter your age in years: " age_years takes the user's input and stores it in the age_years variable.
+Tip: you can use an echo to display the value of a variable for troubleshooting purposes.
+
+
+if Statement:
+
+The if statement is used to check if something is true. It helps us control which parts of the script run based on a condition.
+For example, we use if to make sure the user’s input is valid.
+
+
+Regex (^[0-9]+$):
+
+This part is a pattern used to match text. It’s called a "regular expression" (or regex).
+^[0-9]+$ means that the input must be made up of digits (0-9), and nothing else. This makes sure the user only types numbers.
+^ means "start of input" and $ means "end of input". [0-9] means any digit, and + means "at least one or more".
+
+Resource to learning more about Regex: regexlearn.com/learn/regex101
+
+Tip: Once you have typed or followed the instructions - hit the enter key to progress.
+
+
+Resource for testing and playing with Regex: regex101.com/
+
+
+[[ ]] and !~:
+
+[[ ]] is used to test conditions in Bash. It helps make the script safer and easier to write.
+!~ means "does not match". In this script, [[ ! $age_years =~ ^[0-9]+$ ]] checks if the input does not match the pattern (meaning it’s not a number).
+
+Tip: Other symbols you may want to explore are ==, |&nbsp;, &nbsp;&gt;&nbsp;, &nbsp;&lt;&nbsp;, -eq, -ne, -gt.
+
+We refer to these symbols as "Conditionals" and there are many more conditionals than what I have listed here.
+
+
+ Arithmetic Calculation ($(( ))):
+
+$(( )) is used to do math calculations in Bash.
+age_days=$((age_years * 365)) calculates how many days are in the given number of years. It multiplies age_years by 365.
+
+Exit Code (exit 1):
+
+exit 1 ends the script. The number 1 is an error code, which means something went wrong.
+If the user types something that’s not a valid number, the script stops here.
+Tip: use an echo statement to give a clear message to yourself, and your user about what happened.
+
+
+Attached file: Sample_Script_Control_Structures_Age_Calculator.sh
