@@ -1,5 +1,5 @@
 # Note for cybersecure
-Here is an up-to-date list of skills and knowledge that you should have and be comfortable with at this point in the course. If you have gaps in your knowledge, please don't wait to address the issue - either talk to me during class time or send me an Edsby message.
+@ 1]--      Here is an up-to-date list of skills and knowledge that you should have and be comfortable with at this point in the course. If you have gaps in your knowledge, please don't wait to address the issue - either talk to me during class time or send me an Edsby message.
 
 Basic Linux Commands:
 
@@ -232,7 +232,7 @@ Adhering to these basic security principles ensures that your Linux system is ha
 
 
 
-##Explanation of the Script Concepts (from Least Complex to Most Complex):
+@2]--  ##Explanation of the Script Concepts (from Least Complex to Most Complex):
 
 Comments (#):
 
